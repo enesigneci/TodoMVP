@@ -4,6 +4,9 @@ public class Todo {
     private int userId;
     private int id;
     private String title;
+
+
+
     private boolean completed;
 
     public Todo() {
@@ -21,5 +24,13 @@ public class Todo {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }

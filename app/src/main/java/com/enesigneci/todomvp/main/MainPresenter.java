@@ -15,11 +15,9 @@ import retrofit2.Response;
 
 public class MainPresenter {
     private MainViewInterface mainViewInterface;
-    private Activity activity;
     private List<Todo> todoList;
-    public MainPresenter(Activity activity, MainViewInterface mainViewInterface) {
+    public MainPresenter(MainViewInterface mainViewInterface) {
         this.mainViewInterface = mainViewInterface;
-        this.activity = activity;
     }
     public List<Todo> getTodos(){
         NetworkClient.getInstance().create(TodoInterface.class).getTodos().enqueue(new Callback<List<Todo>>() {
